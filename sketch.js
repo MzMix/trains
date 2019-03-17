@@ -32,7 +32,7 @@ class Brick {
     draw() {
         push();
         translate(this.x, this.y);
-        noStroke();
+        stroke(255)
 
         if (this.type == 'br') {
             fill(this.color);
@@ -115,7 +115,7 @@ let segments = [];
 let bricks = [];
 const size = 40;
 const colors = ['deepskyblue', 'purple', 'red', 'greenyellow', 'darkorange'];
-let imgs = ['Mdown.png', 'Mup.png', 'Mright.png', 'Mleft.png', 'Kdown.png', 'Kup.png', 'Kright.png', 'Kleft.png'];
+let imgs = ['Mdown.png', 'Mup.png', 'Mright.png', 'Mleft.png', 'Kup.png', 'Kright.png', ];
 let picked;
 let counter = 0;
 let sel;
@@ -189,8 +189,6 @@ function createTrain() {
 
     bricks.push(new Brick(null, null, null, 't3K'));
     bricks.push(new Brick(null, null, null, 't2K'));
-    bricks.push(new Brick(null, null, null, 't1K'));
-    bricks.push(new Brick(null, null, null, 't0K'));
 
     createMyBtn(null, '.pion', imgs[0], false, undefined, 'mtm');
     createMyBtn(null, '.pion', imgs[1], false, undefined, 'mtm');
@@ -198,9 +196,7 @@ function createTrain() {
     createMyBtn(null, '.poziom', imgs[3], false, undefined, 'mtm');
 
     createMyBtn(null, '.pion', imgs[4], false, undefined, 'kr');
-    createMyBtn(null, '.pion', imgs[5], false, undefined, 'kr');
-    createMyBtn(null, '.poziom', imgs[6], false, undefined, 'kr');
-    createMyBtn(null, '.poziom', imgs[7], false, undefined, 'kr');
+    createMyBtn(null, '.poziom', imgs[5], false, undefined, 'kr');
 }
 
 function createBricks() {
@@ -272,7 +268,7 @@ function setup() {
         }
     }
 
-    save = createButton('Zapis do pliku');
+    save = createButton('Zapis planszy do pliku');
     save.attribute('onclick', 'saveImg()');
     select('.reset').child(save);
 
