@@ -72,37 +72,11 @@ class Brick {
         } else if (this.type == 't0K') {
             fill(0);
             rect(0, 0, 3 * size, 1 * size);
-            // fill('yellowgreen');
-            // ellipse(0 + size / 2, size / 2, size - 5);
-            // fill('white');
-            // rect(0 + 2 * size, 0, size, size);
             this.w = 3 * size;
             this.h = size;
         } else if (this.type == 't1K') {
             fill(0);
-            rect(0, 0, 3 * size, 1 * size);
-            // fill(color(0, 255, 0, 200));
-            // ellipse(2 * size + size / 2, size / 2, size - 5);
-            // fill('white');
-            // rect(0, 0, size, size);
-            this.w = 3 * size;
-            this.h = size;
-        } else if (this.type == 't2K') {
-            fill(0);
             rect(0, 0, 1 * size, 3 * size);
-            // fill(color(0, 255, 0, 200));
-            // ellipse(size / 2, size / 2, size - 5);
-            // fill('white');
-            // rect(0, 2 * size, size, size);
-            this.w = size;
-            this.h = 3 * size;
-        } else if (this.type == 't3K') {
-            fill(0);
-            rect(0, 0, 1 * size, 3 * size);
-            // fill(color(0, 255, 0, 200));
-            // ellipse(size / 2, 2.5 * size, size - 5);
-            // fill('white');
-            // rect(0, 0, size, size);
             this.w = size;
             this.h = 3 * size;
         }
@@ -187,8 +161,8 @@ function createTrain() {
     bricks.push(new Brick(null, null, null, 't1M'));
     bricks.push(new Brick(null, null, null, 't0M'));
 
-    bricks.push(new Brick(null, null, null, 't3K'));
-    bricks.push(new Brick(null, null, null, 't2K'));
+    bricks.push(new Brick(null, null, null, 't1K'));
+    bricks.push(new Brick(null, null, null, 't0K'));
 
     createMyBtn(null, '.pion', imgs[0], false, undefined, 'mtm');
     createMyBtn(null, '.pion', imgs[1], false, undefined, 'mtm');
